@@ -17,7 +17,7 @@ html {
 *::after {
   box-sizing: inherit;
   /*  BORDES DE TODO */
-  /*     outline: 2px solid lime;   */
+  /* outline: 2px solid lime;    */
   /* #### FONDO SATURADO #### */
   /* background: hsl(0, 100%, 50% / .1); */
 }
@@ -112,6 +112,7 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
+  position: relative;
 }
 
 .loop {
@@ -132,7 +133,7 @@ body {
   filter: brightness(0.6);
   z-index: 1;
 }
-.loop > * {
+.loop__studios, .loop__header {
   position: relative;
   z-index: 2;
 }
@@ -175,6 +176,11 @@ body {
 .loop__button--open {
   background-color: transparent;
 }
+@media (min-width: 75em) {
+  .loop__button--open {
+    display: none;
+  }
+}
 .loop__icon--open {
   background-color: transparent;
 }
@@ -199,15 +205,100 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   color: var(--white);
+  z-index: 1;
 }
 
+.loop__navs {
+  position: absolute;
+  inset: 0;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media (min-width: 75em) {
+  .loop__navs {
+    display: flex;
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+.loop__navs--bg, .loop__navs {
+  opacity: 0;
+  translate: 55vw 0;
+  transition-property: opacity display;
+  transition: 0.4s;
+  transition-behavior: allow-discrete;
+  z-index: 5;
+}
+.loop__navs--bg:where(:not(.display__none)), .loop__navs:where(:not(.display__none)) {
+  display: allow-discrete flex;
+  opacity: 1;
+  translate: 0 0;
+}
+@starting-style {
+  .loop__navs--bg:where(:not(.display__none)), .loop__navs:where(:not(.display__none)) {
+    opacity: 0;
+    translate: 55vw 0;
+  }
+}
+.loop__mobile {
+  inline-size: min(38rem, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 75em) {
+  .loop__mobile {
+    display: none;
+  }
+}
+.loop__link {
+  font-family: "josefin", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
+}
+@media (min-width: 75em) {
+  .loop__link {
+    font-family: "alata", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    filter: brightness(1.2);
+  }
+}
+.loop__navs--bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--black);
+  z-index: 2;
+}
+@media (min-width: 75em) {
+  .loop__navs--bg {
+    background-color: transparent;
+  }
+}
+.loop__logo--nav, .loop__button--close {
+  background-color: transparent;
+}
+@media (min-width: 75em) {
+  .loop__logo--nav, .loop__button--close {
+    display: none;
+  }
+}
 .loop__menu {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
 @media (min-width: 75em) {
   .loop__menu {
     flex-direction: row;
+    align-self: end;
     gap: 2rem;
     font-family: "alata", sans-serif;
     font-size: 0.875rem;
@@ -225,13 +316,13 @@ body {
 }
 .footer__item:hover,
 .loop__item:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .footer__item::before,
 .loop__item::before {
   position: absolute;
   content: "";
-  inset-block-end: -40%;
+  inset-block-end: -70%;
   inset-inline-start: 50%;
   inline-size: 70%;
   block-size: 0.125rem;
@@ -246,6 +337,7 @@ body {
 }
 
 .leader {
+  background-color: var(--grey200);
   inline-size: clamp(20.4375rem, 3.6794rem + 71.5013vw, 38rem);
   display: grid;
   grid-template-columns: 1fr;
@@ -382,8 +474,22 @@ body {
   text-align: center;
   color: var(--black);
 }
-.creations__button, .creations__button--desktop {
+.creations__button {
   inline-size: min(9.8125rem, 100%);
+}
+@media (min-width: 75em) {
+  .creations__button {
+    display: none;
+  }
+}
+.creations__button--desktop {
+  inline-size: min(9.8125rem, 100%);
+  display: none;
+}
+@media (min-width: 75em) {
+  .creations__button--desktop {
+    display: flex;
+  }
 }
 .creations__link, .creations__link--desktop {
   inline-size: min(9.8125rem, 100%);
@@ -392,13 +498,13 @@ body {
   align-items: center;
   margin-inline: auto;
   border: 0.0625rem solid black;
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.4), 0 -0.125rem -0.3125rem rgba(0, 0, 0, 0.4);
   font-family: "alata", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
+  text-transform: uppercase;
   letter-spacing: 0.3125rem;
   padding-block: 0.5rem;
-  text-transform: uppercase;
 }
 .creations__link:hover, .creations__link:focus, .creations__link--desktop:hover, .creations__link--desktop:focus {
   background-color: var(--black);

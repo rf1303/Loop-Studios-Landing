@@ -8,22 +8,27 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" defer></script>
     <title>Frontend Mentor | Loopstudios landing page</title>
 </head>
 
 <body>
+    <div class="loop__navs--bg display__none "></div>
     <section class="loop">
         <header class="loop__studios">
             <section class="loop__heads">
                 <img class="loop__logo" src="./assets/images/logo.svg" alt="">
-                <button type="button" class="loop__button--open display__none ">
+                <button type="button" class="loop__button--open "> <!-- display__none  -->
                     <img class="loop__icon--open" src="./assets/images/icon-hamburger.svg" alt="">
                 </button>
-                <nav class="loop__navs "> <!-- display__none -->
-                    <button type="button" class="loop__button--close display__none ">
-                        <img class="loop__icon--close" src="./assets/images/icon-close.svg" alt="">
-                    </button>
-                    <ul class="loop__menu">
+                    <nav class="loop__navs display__none "> <!-- --> 
+                    <section class="loop__mobile "> 
+                        <img class="loop__logo loop__logo--nav" src="./assets/images/logo.svg" alt="">
+                        <button type="button" class="loop__button--close "> <!-- display__none  -->
+                            <img class="loop__icon--close" src="./assets/images/icon-close.svg" alt="">
+                        </button>
+                    </section>
+                    <ul class="loop__menu ">
                         <li class="loop__item">
                             <a class="loop__link" href="#">About</a>
                         </li>
@@ -131,8 +136,8 @@
                     <p class="gallery__text">Make it fisheye </p>
                 </div>
             </section>
-            <section class="creations__button display__none "> <!-- -->
-                <a class="creations__link" href="#">See all</a>
+            <section class="creations__button "> 
+                <button class="creations__link" >See all</button>
             </section>
         </section>
     </main>
