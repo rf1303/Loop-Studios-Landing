@@ -103,6 +103,11 @@ body {
   padding-block-start: 2.5rem;
   margin-block-end: 6rem;
 }
+@media (min-width: 43.75em) {
+  .loop {
+    padding-block-start: 4rem;
+  }
+}
 .loop::before {
   position: absolute;
   content: "";
