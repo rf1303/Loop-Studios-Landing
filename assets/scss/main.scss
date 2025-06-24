@@ -428,10 +428,15 @@ body {
     gap: $space-400;
   }
 
-
   &__item {
     position: relative;
     cursor: pointer;
+    &:hover .gallery__image {
+      filter: contrast(.1);
+    }
+    &:hover .gallery__text {
+        color: var(--black);
+    }
   }
   &__image {
     filter: brightness(.6);
@@ -450,6 +455,16 @@ body {
     }
   }
 }
+// .gallery:hover,
+// .gallery:focus {
+//   .galley__item {
+//      border-right-color: var(--white);
+//   }
+//   .gallery__image {
+//     filter: brightness(1.5);
+//   }  
+//       color: var(--black);    
+//     }
 
 .wrappers__footer {
   inline-size: 100%;

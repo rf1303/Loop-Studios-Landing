@@ -552,6 +552,12 @@ body {
   position: relative;
   cursor: pointer;
 }
+.gallery__item:hover .gallery__image {
+  filter: contrast(0.1);
+}
+.gallery__item:hover .gallery__text {
+  color: var(--black);
+}
 .gallery__image {
   filter: brightness(0.6);
 }
