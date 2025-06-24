@@ -2,58 +2,39 @@
 
 This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-🚀 Technologies used
-✅ Semantic HTML5
+** Technologies used
 
-✅ Modular SCSS with layered architecture (@use, @forward)
+- Semantic HTML5
 
-✅ Responsive design (clamp(), media queries, object-fit)
+- Modular SCSS with layered architecture (@use, @forward)
 
-✅ JavaScript for menu interaction
+- Responsive design (clamp(), media queries, object-fit)
 
-✅ Accessibility best practices (alt, roles, focus).
+- JavaScript for menu interaction
 
-✅ Use of picture for responsive images
+- Accessibility best practices (alt, roles, focus).
 
-📁 Project structure
-css
-Copy
-Edit
-├── assets/
-│ ├── css/
-│ │ │ └─── style. css → Compiled SCSS
-│ ├── images/ → Site images
-│ ├── js/
-│ │ │ └── main.js → Menu functionality
-│ └── scss/
-│ ├── main. scss → Main input
-│ ├── globals/ → Reset, variables
-│ └── util/ → Mixins, helpers
-├── index.html
-└── README.md
-🧩 Functionalities
-🎨 Adaptive design from mobile to desktop.
+- Use of picture for responsive images
 
-🌓 Background with ::before and filters to darken images without position: fixed
 
-📱 Animated mobile menu with visibility control.
+** Functionalities
+- Adaptive design from mobile to desktop.
 
-✨ Custom hover animations on navigation items.
+- Background with ::before and filters to darken images without position: fixed
 
-📷 Screen size optimized images (<picture> + source)
+- Animated mobile menu with visibility control.
 
-Translated with DeepL.com (free version)
+- Custom hover animations on navigation items.
 
-### The challenge
+- Screen size optimized images (<picture> + source)
 
-Users should be able to:
+-Translated with DeepL.com (free version)
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot01.jpeg)
+![](./screenshot02.jpeg)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
