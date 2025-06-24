@@ -309,9 +309,13 @@ body {
   }
 
   &__wrapper {
-    @include u.breakpoint(large) {
-      display: grid;
+    display: grid;
+    gap: $space-200;
+    @include u.breakpoint(medium) {
       gap: $space-300;
+    }
+
+    @include u.breakpoint(large) {
       inline-size: u.rem(445);
       block-size: u.rem(220);
         

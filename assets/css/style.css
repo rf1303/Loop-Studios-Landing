@@ -412,10 +412,17 @@ body {
     gap: 0;
   }
 }
+.leader__wrapper {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 43.75em) {
+  .leader__wrapper {
+    gap: 1.5rem;
+  }
+}
 @media (min-width: 75em) {
   .leader__wrapper {
-    display: grid;
-    gap: 1.5rem;
     inline-size: 27.8125rem;
     block-size: 13.75rem;
   }
