@@ -358,6 +358,7 @@ body {
   @include u.breakpoint(large){
     inline-size: inherit;
     margin-block: u.rem(184);
+  gap: $space-1000;
   };
 
 }
