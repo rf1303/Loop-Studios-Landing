@@ -26,6 +26,9 @@ body {
   @include u.breakpoint(medium) {
     padding-block-start: $space-800;
   }
+  @include u.breakpoint(large) {
+    margin-block-end: u.rem(160);
+  }
   
   &::before {
     position: absolute;
