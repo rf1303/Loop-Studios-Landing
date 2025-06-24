@@ -16,10 +16,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  /*  BORDES DE TODO */
-  /* outline: 2px solid lime;    */
-  /* #### FONDO SATURADO #### */
-  /* background: hsl(0, 100%, 50% / .1); */
 }
 
 body {
@@ -27,24 +23,6 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  /* background-color: #979797; */
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 ul, ol {
@@ -459,7 +437,7 @@ body {
   font-size: 0.938rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #979797;
+  color: #3B3A3A;
   text-align: center;
 }
 @media (min-width: 75em) {
