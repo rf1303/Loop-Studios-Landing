@@ -51,9 +51,13 @@ body {
     justify-self: center;
     align-items: start;
     z-index: 2;
+    margin-inline: auto;
     @include u.breakpoint(large){
       inline-size: clamp(56.25rem, -9.6875rem + 87.9167vw, 69.4375rem);
     };
+    @include u.breakpoint-xs(small) {
+      inline-size: clamp(16.25rem, 5.7031rem + 62.5vw, 19.375rem);
+    }
   }
   &__heads {
     inline-size: clamp(20.4375rem, 3.6794rem + 71.5013vw, 38rem);
@@ -62,11 +66,17 @@ body {
     align-items: center;
     @include u.breakpoint(large){
       inline-size: clamp(56.25rem, -9.6875rem + 87.9167vw, 69.4375rem);
-    };
+    }
+    @include u.breakpoint-xs(small) {
+      inline-size: clamp(16.25rem, 5.7031rem + 62.5vw, 19.375rem);
+    }
   }
   &__logo {
     inline-size: clamp(9rem, 6.1374rem + 12.2137vw, 12rem);
     block-size: clamp(1.5rem, 1.0229rem + 2.0356vw, 2rem);
+    @include u.breakpoint-xs(small) {
+      inline-size: clamp(6.25rem, -0.0781rem + 37.5vw, 8.125rem);
+    }
   }
   &__button--open {
     background-color: transparent;
@@ -88,6 +98,10 @@ body {
     @include u.breakpoint(large){
       inline-size: clamp(38rem, 24.875rem + 17.5vw, 40.625rem);
     };
+    @include u.breakpoint-xs(small) {
+      inline-size: clamp(16.875rem, 10.5469rem + 37.5vw, 18.75rem);
+      block-size: clamp(9.375rem, 3.0469rem + 37.5vw, 11.25rem);
+    }
   }
   &__title {
     inline-size: clamp(17.4375rem, 2.5878rem + 63.3588vw, 33rem);
@@ -95,6 +109,9 @@ body {
     text-transform: uppercase;
     color: var(--white);
     z-index: 1;
+    @include u.breakpoint-xs(small) {
+      font-size: clamp(1.625rem, 0.3594rem + 7.5vw, 2rem);
+    }
   }
 }
 

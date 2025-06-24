@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttonClose = document.querySelector('.loop__button--close');
     const navBg = document.querySelector('.loop__navs--bg'); 
 
-    menuDesk(navDesktop) ;
+    menuDesk(navDesktop);
 
-    navDesktop.addEventListener('change', () => {
-        menuDesk(navDesktop);
+    navDesktop.addEventListener('change', (e) => {
+        menuDesk(e);
     });
 
     buttonOpen.addEventListener('click', () => {
